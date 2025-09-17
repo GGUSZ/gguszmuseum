@@ -1,0 +1,295 @@
+[gd_scene load_steps=11 format=3 uid="uid://bp75fjtrpt6gb"]
+
+[ext_resource type="Texture2D" uid="uid://fvuxxev2epl7" path="res://assets/sprites/misc/rye_pfp.png" id="1_123nv"]
+[ext_resource type="Texture2D" uid="uid://ciw0gmdrfguva" path="res://assets/sprites/misc/swing_pfp.png" id="2_npgth"]
+[ext_resource type="Texture2D" uid="uid://ckxsan1h8s8i3" path="res://assets/sprites/misc/par_pfp.png" id="3_npgth"]
+[ext_resource type="Texture2D" uid="uid://c7x4sqmks4c4w" path="res://assets/sprites/misc/Screenshot from 2025-08-08 12-37-45.png" id="4_fcip7"]
+[ext_resource type="Texture2D" uid="uid://dg4m1fbd0isaa" path="res://assets/sprites/misc/jas_pfp.png" id="4_gtgu0"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_62cnq"]
+bg_color = Color(0, 0, 0, 0.811765)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ke72r"]
+bg_color = Color(0.649529, 0.469136, 0.74509, 0.227451)
+
+[sub_resource type="Animation" id="Animation_fcip7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel/MarginContainer:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_npgth"]
+resource_name = "fade"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel/MarginContainer:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(2, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gtgu0"]
+_data = {
+&"RESET": SubResource("Animation_fcip7"),
+&"fade": SubResource("Animation_npgth")
+}
+
+[node name="wall" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_62cnq")
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="HScrollBar" type="ScrollContainer" parent="Panel/MarginContainer"]
+layout_mode = 2
+scroll_horizontal = 100
+vertical_scroll_mode = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/MarginContainer/HScrollBar"]
+layout_mode = 2
+theme_override_constants/separation = 16
+alignment = 1
+
+[node name="Panel" type="Panel" parent="Panel/MarginContainer/HScrollBar/HBoxContainer"]
+custom_minimum_size = Vector2(700, 500)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ke72r")
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel/MarginContainer/HScrollBar/HBoxContainer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="Label" type="Label" parent="Panel/MarginContainer/HScrollBar/HBoxContainer/Panel/MarginContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "Hey Cen! Welcome to the big 19!
+It's crazy to think that I've known you for almost 2 years!
+In those 2 years we've done so much together, swe've laughed, we've cried and we have shared victories and defeats.
+You've made so much great art for your channel and for me!
+You've improved so much not only in your skills as an artist,
+but in being an amazing friend!
+I think I speak for everyone when I say we are all so lucky to know someone like you,
+you bring us all together and inspire us to be the best people we can be!
+We would not be the same without you and we certainly wouldn't be where we are today!
+Thank you so much for being so friendly, kind, caring, thoughtful and sympathetic.
+Thank you for being there for us, to lift us up when we need it most.
+Thank you for being so honest and sincere! And thank you for being an amazing friend! 
+
+And I want to personally thank you for meeting me irl, you were better in person than I ever imagined!
+
+You have a long, exciting road ahead of you, there will be struggles for sure,
+but just know that all of us will be here for you and we are rooting for you each
+and every single day! We all love you Caroline and you mean the world to all of us! <3
+
+Here's to another amazing year!
+
+Much Love!
+-Rylan"
+horizontal_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Panel/MarginContainer/HScrollBar/HBoxContainer/Panel"]
+layout_mode = 0
+offset_left = 624.0
+offset_top = 353.0
+offset_right = 735.0
+offset_bottom = 464.0
+rotation = 0.438197
+texture = ExtResource("1_123nv")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Panel2" type="Panel" parent="Panel/MarginContainer/HScrollBar/HBoxContainer"]
+custom_minimum_size = Vector2(700, 500)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ke72r")
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel/MarginContainer/HScrollBar/HBoxContainer/Panel2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="Label" type="Label" parent="Panel/MarginContainer/HScrollBar/HBoxContainer/Panel2/MarginContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "Happy birthday Cennn!!!!
+I hope you have a wonderful birthday and I'm so glad to have you as my friend!!!!
+sI love you so much!!!!! YOU AWESOME!!!!! :D"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Panel/MarginContainer/HScrollBar/HBoxContainer/Panel2"]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 103.0
+offset_right = 134.0
+offset_bottom = 214.0
+rotation = -0.715746
+texture = ExtResource("2_npgth")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Panel3" type="Panel" parent="Panel/MarginContainer/HScrollBar/HBoxContainer"]
+custom_minimum_size = Vector2(700, 500)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ke72r")
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel/MarginContainer/HScrollBar/HBoxContainer/Panel3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="Label" type="Label" parent="Panel/MarginContainer/HScrollBar/HBoxContainer/Panel3/MarginContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "Heya bro, borndayth amiright?
+As of writing this I was planning to do smth much much bigger than just me sending you a message,
+but i realised i didnt have enough time, with certain circumstances.
+Ever since ive known you throughout late 2023 to now, ive always sorta admired you,
+both your work and who you were as a person.
+You seemed to be so genuinely nice and caring to the people around you, regardless of circumstance.
+And through the time, i had the privilege of both knowing you,
+and  being one of your close friends, something that im glad for and wish to keep being.
+You have been such an important part of my modern life up to now, someone who i can resonate with,
+relate too, share something in common with. 
+Just someone who i could talk and joke with, without feeling like im doing something wrong.
+And although there have been some times where we have quarreled a lil, as friends do,
+i like to think that those moments dont rlly matter in the bigger picture of things.
+I would like to hope that even in the future, we could always be as close as we are now,
+and that each day can be the same as the last.
+You are not like the others, you are special, at least to me.
+sI hope that we could always continue to talk, joke, and draw together as we always do.
+I do not believe for even a second that anything will get in the way between our friendship.
+I hope that your day today will be absolutely fantastic Caroline <3, Happy birthday. 
+- Darkspar"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Panel/MarginContainer/HScrollBar/HBoxContainer/Panel3"]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 405.0
+offset_right = 95.0
+offset_bottom = 489.0
+rotation = 0.405803
+texture = ExtResource("3_npgth")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Panel4" type="Panel" parent="Panel/MarginContainer/HScrollBar/HBoxContainer"]
+custom_minimum_size = Vector2(700, 500)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ke72r")
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel/MarginContainer/HScrollBar/HBoxContainer/Panel4"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="Label" type="Label" parent="Panel/MarginContainer/HScrollBar/HBoxContainer/Panel4/MarginContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "uhhh I dont really have any art done for her or any gifts but i just wish her a very happy birthday and
+wish her best for her new chapter in her animation school
+- Jas"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Panel/MarginContainer/HScrollBar/HBoxContainer/Panel4"]
+layout_mode = 0
+offset_left = 298.0
+offset_top = 355.0
+offset_right = 469.0
+offset_bottom = 526.0
+rotation = -0.524427
+texture = ExtResource("4_gtgu0")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Panel5" type="Panel" parent="Panel/MarginContainer/HScrollBar/HBoxContainer"]
+custom_minimum_size = Vector2(700, 500)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ke72r")
+
+[node name="TextureRect" type="TextureRect" parent="Panel/MarginContainer/HScrollBar/HBoxContainer/Panel5"]
+layout_mode = 0
+offset_left = 138.0
+offset_top = 33.0
+offset_right = 735.0
+offset_bottom = 345.0
+rotation = 0.405803
+texture = ExtResource("4_fcip7")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_gtgu0")
+}
+autoplay = "fade"

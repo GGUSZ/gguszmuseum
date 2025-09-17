@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="paintingResource" load_steps=3 format=3 uid="uid://cr8cmdxe28uk4"]
+
+[ext_resource type="Script" uid="uid://32jjs2iruvdn" path="res://data/resources/painting.gd" id="1_gdnco"]
+[ext_resource type="Texture2D" uid="uid://cnv8fx2qwific" path="res://assets/sprites/paintings/Eve.PNG" id="1_jn2rm"]
+
+[resource]
+script = ExtResource("1_gdnco")
+painting = ExtResource("1_jn2rm")
+message = "MY BABY!!!!
+one of my proudest creations!!
+This is my oc Eve, she was brought into this world solely because of me thinking
+about this very pose and really really wanting
+to draw it.
+
+She is a main character of my main story and a corner stone of the plot :)"
+metadata/_custom_type_script = "uid://32jjs2iruvdn"

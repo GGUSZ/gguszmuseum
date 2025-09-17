@@ -1,0 +1,177 @@
+[gd_scene load_steps=18 format=3 uid="uid://cgh27q6a2kxwg"]
+
+[ext_resource type="Script" uid="uid://bib7hw48y4ks0" path="res://data/scripts/paintings/animated_inspect.gd" id="1_peuv3"]
+[ext_resource type="Texture2D" uid="uid://citj7yhbcrjci" path="res://assets/sprites/paintings/norfee.png" id="2_peuv3"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dm0jn"]
+bg_color = Color(0, 0, 0, 0.811765)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xvi5e"]
+atlas = ExtResource("2_peuv3")
+region = Rect2(0, 0, 306, 345)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1dhop"]
+atlas = ExtResource("2_peuv3")
+region = Rect2(306, 0, 306, 345)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yud36"]
+atlas = ExtResource("2_peuv3")
+region = Rect2(612, 0, 306, 345)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3xbpc"]
+atlas = ExtResource("2_peuv3")
+region = Rect2(918, 0, 306, 345)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tq7wm"]
+atlas = ExtResource("2_peuv3")
+region = Rect2(1224, 0, 306, 345)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dopwn"]
+atlas = ExtResource("2_peuv3")
+region = Rect2(0, 345, 306, 345)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_anr2v"]
+atlas = ExtResource("2_peuv3")
+region = Rect2(306, 345, 306, 345)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xp85j"]
+atlas = ExtResource("2_peuv3")
+region = Rect2(612, 345, 306, 345)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hossv"]
+atlas = ExtResource("2_peuv3")
+region = Rect2(918, 345, 306, 345)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a0d75"]
+atlas = ExtResource("2_peuv3")
+region = Rect2(1224, 345, 306, 345)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_04nvd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xvi5e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1dhop")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yud36")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3xbpc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tq7wm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dopwn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_anr2v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xp85j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hossv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a0d75")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}]
+
+[sub_resource type="Animation" id="Animation_dm0jn"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MarginContainer:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_ie21g"]
+resource_name = "fade in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MarginContainer:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(2, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_sh3d2"]
+_data = {
+&"RESET": SubResource("Animation_dm0jn"),
+&"fade in": SubResource("Animation_ie21g")
+}
+
+[node name="animated_inspect" type="Control" node_paths=PackedStringArray("label")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 3
+script = ExtResource("1_peuv3")
+label = NodePath("MarginContainer/HBoxContainer/Label")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_dm0jn")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 64
+theme_override_constants/margin_top = 64
+theme_override_constants/margin_right = 64
+theme_override_constants/margin_bottom = 64
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 32
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 14
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect" type="AnimatedSprite2D" parent="MarginContainer/HBoxContainer"]
+position = Vector2(680, 208)
+sprite_frames = SubResource("SpriteFrames_04nvd")
+autoplay = "default"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_sh3d2")
+}
+autoplay = "fade in"

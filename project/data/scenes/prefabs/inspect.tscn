@@ -1,0 +1,142 @@
+[gd_scene load_steps=12 format=3 uid="uid://bf57yujgjhbly"]
+
+[ext_resource type="Script" uid="uid://b31agtwysk6lw" path="res://data/scenes/prefabs/inspect.gd" id="1_dm0jn"]
+[ext_resource type="Texture2D" uid="uid://byddkg35miw76" path="res://assets/sprites/gui/keycaps/mouse_click.png" id="2_dm0jn"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dm0jn"]
+bg_color = Color(0, 0, 0, 0.811765)
+
+[sub_resource type="Animation" id="Animation_dm0jn"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MarginContainer:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_ie21g"]
+resource_name = "fade in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MarginContainer:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(2, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_sh3d2"]
+_data = {
+&"RESET": SubResource("Animation_dm0jn"),
+&"fade in": SubResource("Animation_ie21g")
+}
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sh3d2"]
+atlas = ExtResource("2_dm0jn")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wfvtw"]
+atlas = ExtResource("2_dm0jn")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f8lco"]
+atlas = ExtResource("2_dm0jn")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gutm6"]
+atlas = ExtResource("2_dm0jn")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ie21g"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sh3d2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wfvtw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f8lco")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gutm6")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="inspect" type="Control" node_paths=PackedStringArray("label", "texture_rect")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 3
+script = ExtResource("1_dm0jn")
+label = NodePath("MarginContainer/HBoxContainer/Label")
+texture_rect = NodePath("MarginContainer/HBoxContainer/TextureRect")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_dm0jn")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 64
+theme_override_constants/margin_top = 64
+theme_override_constants/margin_right = 64
+theme_override_constants/margin_bottom = 64
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 16
+alignment = 2
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+expand_mode = 3
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_sh3d2")
+}
+autoplay = "fade in"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(70.25, 65.25)
+scale = Vector2(7.4687505, 7.4687505)
+sprite_frames = SubResource("SpriteFrames_ie21g")
+autoplay = "default"

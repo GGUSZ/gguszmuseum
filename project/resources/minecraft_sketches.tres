@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="paintingResource" load_steps=3 format=3 uid="uid://cgoj0p6ouyq2d"]
+
+[ext_resource type="Texture2D" uid="uid://dmja2tre5ric7" path="res://assets/sprites/paintings/LilGus.PNG" id="1_1dy1j"]
+[ext_resource type="Script" uid="uid://32jjs2iruvdn" path="res://data/resources/painting.gd" id="2_roxjf"]
+
+[resource]
+script = ExtResource("2_roxjf")
+painting = ExtResource("1_1dy1j")
+message = "Lil me!!! "
+metadata/_custom_type_script = "uid://32jjs2iruvdn"

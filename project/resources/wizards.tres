@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="paintingResource" load_steps=3 format=3 uid="uid://yqmbi1midpde"]
+
+[ext_resource type="Texture2D" uid="uid://cyu7ipiiscbsh" path="res://assets/sprites/paintings/Wizards.PNG" id="1_kn1km"]
+[ext_resource type="Script" uid="uid://32jjs2iruvdn" path="res://data/resources/painting.gd" id="1_tbfrl"]
+
+[resource]
+script = ExtResource("1_tbfrl")
+painting = ExtResource("1_kn1km")
+message = "A collection of random wizards drawings of my friends"
+metadata/_custom_type_script = "uid://32jjs2iruvdn"

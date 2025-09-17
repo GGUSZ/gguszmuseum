@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="paintingResource" load_steps=3 format=3 uid="uid://chewgjhlkb8h5"]
+
+[ext_resource type="Texture2D" uid="uid://chagy3wqvbvks" path="res://assets/sprites/paintings/RandSketches1.PNG" id="1_eii5q"]
+[ext_resource type="Script" uid="uid://32jjs2iruvdn" path="res://data/resources/painting.gd" id="1_wtjg8"]
+
+[resource]
+script = ExtResource("1_wtjg8")
+painting = ExtResource("1_eii5q")
+message = "just some random sketches i really liked :D"
+metadata/_custom_type_script = "uid://32jjs2iruvdn"

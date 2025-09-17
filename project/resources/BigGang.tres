@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="paintingResource" load_steps=3 format=3 uid="uid://ciwj4nne4sj58"]
+
+[ext_resource type="Texture2D" uid="uid://b3lq7xdwt6e6m" path="res://assets/sprites/paintings/BigGang.PNG" id="1_3jupv"]
+[ext_resource type="Script" uid="uid://32jjs2iruvdn" path="res://data/resources/painting.gd" id="1_mqkrd"]
+
+[resource]
+script = ExtResource("1_mqkrd")
+painting = ExtResource("1_3jupv")
+message = "Testing out some emotions/faces with me and my friends personas"
+metadata/_custom_type_script = "uid://32jjs2iruvdn"

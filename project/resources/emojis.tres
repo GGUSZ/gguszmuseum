@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="paintingResource" load_steps=3 format=3 uid="uid://dhut0ntvghai3"]
+
+[ext_resource type="Script" uid="uid://32jjs2iruvdn" path="res://data/resources/painting.gd" id="1_ae75k"]
+[ext_resource type="Texture2D" uid="uid://cd6u0eli06rw5" path="res://assets/sprites/paintings/Emojis.PNG" id="1_vv7tl"]
+
+[resource]
+script = ExtResource("1_ae75k")
+painting = ExtResource("1_vv7tl")
+message = "One of my first digital drawings,
+wanted to do something toease myself into using my tablet"
+metadata/_custom_type_script = "uid://32jjs2iruvdn"

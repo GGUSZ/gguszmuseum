@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="paintingResource" load_steps=3 format=3 uid="uid://fk25xq2rvn42"]
+
+[ext_resource type="Script" uid="uid://32jjs2iruvdn" path="res://data/resources/painting.gd" id="1_4m7th"]
+[ext_resource type="Texture2D" uid="uid://761di60goiny" path="res://assets/sprites/paintings/CenBD.png" id="1_cpje1"]
+
+[resource]
+script = ExtResource("1_4m7th")
+painting = ExtResource("1_cpje1")
+message = "Birthday Art for my friend cengaline :)"
+metadata/_custom_type_script = "uid://32jjs2iruvdn"

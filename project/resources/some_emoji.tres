@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="paintingResource" load_steps=3 format=3 uid="uid://dix1nh3dxdvmm"]
+
+[ext_resource type="Script" uid="uid://32jjs2iruvdn" path="res://data/resources/painting.gd" id="1_iiffi"]
+[ext_resource type="Texture2D" uid="uid://docxy08imgcvc" path="res://assets/sprites/paintings/SomeEmoji.PNG" id="1_nuymo"]
+
+[resource]
+script = ExtResource("1_iiffi")
+painting = ExtResource("1_nuymo")
+message = "Some random sketch i found while going through my art folder,
+dont remember making it at all"
+metadata/_custom_type_script = "uid://32jjs2iruvdn"

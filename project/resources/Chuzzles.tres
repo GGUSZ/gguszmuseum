@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="paintingResource" load_steps=3 format=3 uid="uid://cpj5w5r15ovrw"]
+
+[ext_resource type="Script" uid="uid://32jjs2iruvdn" path="res://data/resources/painting.gd" id="1_3gyb2"]
+[ext_resource type="Texture2D" uid="uid://dr3lgbnlklvk5" path="res://assets/sprites/paintings/Chuzzles.PNG" id="1_t0qqf"]
+
+[resource]
+script = ExtResource("1_3gyb2")
+painting = ExtResource("1_t0qqf")
+message = "A small inside joke between me and some friends,
+drew us as chuzzles and intent
+to one day have a collection of all my friends!
+
+fun fact: i brought this image to a job interview as 
+basically my only credentials and portfolio
+and actually got the job"
+metadata/_custom_type_script = "uid://32jjs2iruvdn"

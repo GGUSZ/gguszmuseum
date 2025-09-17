@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="paintingResource" load_steps=3 format=3 uid="uid://cnd4ggsrd34hb"]
+
+[ext_resource type="Script" uid="uid://32jjs2iruvdn" path="res://data/resources/painting.gd" id="1_gd1ys"]
+[ext_resource type="Texture2D" uid="uid://u62qry5wlfgg" path="res://assets/sprites/paintings/bigonesComic#1.png" id="1_jc411"]
+
+[resource]
+script = ExtResource("1_gd1ys")
+painting = ExtResource("1_jc411")
+message = "a small comic featuring my friends,
+we had a smoke detector sound board and this joke was born"
+metadata/_custom_type_script = "uid://32jjs2iruvdn"

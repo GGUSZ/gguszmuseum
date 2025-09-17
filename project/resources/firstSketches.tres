@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="paintingResource" load_steps=3 format=3 uid="uid://c4gmhitnv04hg"]
+
+[ext_resource type="Texture2D" uid="uid://cfrcih6bnhgrb" path="res://assets/sprites/paintings/FistSketches.PNG" id="1_hrv3j"]
+[ext_resource type="Script" uid="uid://32jjs2iruvdn" path="res://data/resources/painting.gd" id="1_rpaah"]
+
+[resource]
+script = ExtResource("1_rpaah")
+painting = ExtResource("1_hrv3j")
+message = "My very first digital sketches!! The first canvas i ever!!!"
+metadata/_custom_type_script = "uid://32jjs2iruvdn"

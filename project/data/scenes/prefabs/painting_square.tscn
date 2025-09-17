@@ -1,0 +1,211 @@
+[gd_scene load_steps=16 format=3 uid="uid://dqcog52x0jjuo"]
+
+[ext_resource type="Script" uid="uid://dak08vm5e7axx" path="res://data/scripts/paintings/painting.gd" id="1_bet23"]
+[ext_resource type="Texture2D" uid="uid://drntlpvdi3m4o" path="res://assets/sprites/objects/frame_1.png" id="2_bet23"]
+[ext_resource type="Texture2D" uid="uid://dcd71ajif20nd" path="res://assets/sprites/gui/keycaps/eDisplay.png" id="2_hx261"]
+[ext_resource type="Texture2D" uid="uid://761di60goiny" path="res://assets/sprites/paintings/CenBD.png" id="2_igygn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vnivd"]
+atlas = ExtResource("2_hx261")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_acpoe"]
+atlas = ExtResource("2_hx261")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mlcpe"]
+atlas = ExtResource("2_hx261")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gaj7v"]
+atlas = ExtResource("2_hx261")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yirnq"]
+atlas = ExtResource("2_hx261")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_j5ssh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vnivd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_acpoe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mlcpe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gaj7v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yirnq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 6.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bet23"]
+size = Vector2(20, 11)
+
+[sub_resource type="Animation" id="Animation_hx261"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("InteractPopup:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -26)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("InteractPopup:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.125, 0.125)]
+}
+
+[sub_resource type="Animation" id="Animation_vnivd"]
+resource_name = "hide_gui"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("InteractPopup:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(2.639016, 0.21022414),
+"update": 0,
+"values": [Vector2(0, -26), Vector2(0, -7)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("InteractPopup:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.19999999),
+"transitions": PackedFloat32Array(0.42044842, 0.25000003),
+"update": 0,
+"values": [Vector2(0.125, 0.125), Vector2(1e-05, 1e-05)]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.19999999),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"hide_ui"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_igygn"]
+resource_name = "show_gui"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("InteractPopup:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(0.21022414, 2.639016),
+"update": 0,
+"values": [Vector2(0, -18), Vector2(0, -26)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("InteractPopup:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(0.25000003, 0.42044842),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05), Vector2(0.125, 0.125)]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"show_ui"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hx261"]
+_data = {
+&"RESET": SubResource("Animation_hx261"),
+&"hide_gui": SubResource("Animation_vnivd"),
+&"show_gui": SubResource("Animation_igygn")
+}
+
+[node name="painting_square" type="Node2D"]
+script = ExtResource("1_bet23")
+
+[node name="InteractPopup" type="AnimatedSprite2D" parent="."]
+visible = false
+z_index = 10
+position = Vector2(0, -26)
+scale = Vector2(0.125, 0.125)
+sprite_frames = SubResource("SpriteFrames_j5ssh")
+autoplay = "default"
+frame_progress = 0.28327268
+
+[node name="painting" type="Node2D" parent="."]
+position = Vector2(0, -14)
+scale = Vector2(2, 2)
+
+[node name="painting" type="Sprite2D" parent="painting"]
+position = Vector2(-2.30968e-07, 2.9802322e-07)
+scale = Vector2(0.0059999996, 0.006)
+texture = ExtResource("2_igygn")
+
+[node name="Frame" type="Sprite2D" parent="painting"]
+position = Vector2(0, 0.5)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_bet23")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -1.5)
+shape = SubResource("RectangleShape2D_bet23")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_hx261")
+}
+
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]

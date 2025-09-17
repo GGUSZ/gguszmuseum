@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="paintingResource" load_steps=3 format=3 uid="uid://b5g0cpsy54x1q"]
+
+[ext_resource type="Script" uid="uid://32jjs2iruvdn" path="res://data/resources/painting.gd" id="1_cbivd"]
+[ext_resource type="Texture2D" uid="uid://c8laj7h4sps48" path="res://assets/sprites/paintings/WondoBreadman.PNG" id="1_sqxwf"]
+
+[resource]
+script = ExtResource("1_cbivd")
+painting = ExtResource("1_sqxwf")
+message = "Random christmas drawing, had this idea to turn my bread friend into a gingerbread"
+metadata/_custom_type_script = "uid://32jjs2iruvdn"

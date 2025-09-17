@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="paintingResource" load_steps=3 format=3 uid="uid://c26nbhnb5gs6l"]
+
+[ext_resource type="Texture2D" uid="uid://cayaa17kktep7" path="res://assets/sprites/paintings/Singaline.PNG" id="1_mfwcq"]
+[ext_resource type="Script" uid="uid://32jjs2iruvdn" path="res://data/resources/painting.gd" id="1_py08i"]
+
+[resource]
+script = ExtResource("1_py08i")
+painting = ExtResource("1_mfwcq")
+message = "A pun of my friends online name turned into a fun drawing :D"
+metadata/_custom_type_script = "uid://32jjs2iruvdn"

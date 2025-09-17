@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="paintingResource" load_steps=3 format=3 uid="uid://x2lirvh3b8gb"]
+
+[ext_resource type="Texture2D" uid="uid://cwvvlnapneec5" path="res://assets/sprites/paintings/Chibis.PNG" id="1_p7t6d"]
+[ext_resource type="Script" uid="uid://32jjs2iruvdn" path="res://data/resources/painting.gd" id="1_qcdyy"]
+
+[resource]
+script = ExtResource("1_qcdyy")
+painting = ExtResource("1_p7t6d")
+message = "When i got my drawing tablet i decided to make my
+first real attempt at drawing digitally my friends
+cengaline and ally"
+metadata/_custom_type_script = "uid://32jjs2iruvdn"

@@ -1,0 +1,2 @@
+extends paintingResource
+class_name AnimatedPaintingResource
